@@ -3,6 +3,7 @@
   "description": "proyecto de comunicacion con la api de sengrid ",
   "type": "library",
   "version": "1.0.0",
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "NDD_send_connect\\": "src/"
@@ -10,12 +11,13 @@
   },
   "authors": [
     {
-      "name": "Miguel Angel Parra Mondragon"
+      "name": "Miguel Angel Parra Mondragon",
+      "email": "parra_mondragon@live.com"
     }
   ],
   "minimum-stability": "stable",
   "require": {
     "php": "^8.1",
-    "guzzlehttp/guzzle": "^7.0"
+    "guzzlehttp/guzzle": "^7.9"
   }
 }
