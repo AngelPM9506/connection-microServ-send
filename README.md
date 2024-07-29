@@ -50,8 +50,8 @@ Puedes enviar un correo electrónico utilizando el método ``send_email`` o ``se
 ```PHP
 $from = 'correoOrigen@example.com';
 $to = 'destinatario@example.com';
-$cc = 'concopiaa@example.com'; // opcional y pueder ser null
-$bcc = 'concopiaoculta@example.com'; // opcional y pueder ser null
+$cc = 'concopiaa@example.com'; // opcional y puede ser null
+$bcc = 'concopiaoculta@example.com'; // opcional y puede ser null
 $subject = 'Asunto del correo';
 $html = '<p>Contenido del correo en HTML</p>';
 $text = 'Contenido del correo en texto plano';
