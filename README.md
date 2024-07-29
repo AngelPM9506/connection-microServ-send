@@ -17,7 +17,7 @@ composer require angelpm9506/sendgridapiinterface
 
 ## Inicialización
 
-Para utilizar la librería, primero debes inicializar la clase `NDD_send_connect` con tu API key en caso de tener php 8 en adelante:
+Para utilizar la librería, primero debes inicializar la clase `NDD_send_connect` con tu API key en caso de tener php 8.0 en adelante:
 
 ```PHP
 require 'vendor/autoload.php';
@@ -30,7 +30,7 @@ $isToken = false; // si es un token en lugar deuna apikey lo que se esta impleme
 $sendConnect = new NDD_send_connect($apikey, $urlBase, isToken);
 ```
 
-Si tienes una versión de php inferior a la 8.0 tienes que usar la clase `NDD_send_connect_php56` ya que esta implemente los métodos necesarios para versiones de php inferiores a la 8.0:
+Si tienes una versión de php inferior a la 8.0 tienes que usar la clase `NDD_send_connect_php56` ya que esta implementa los métodos necesarios para versiones de php inferiores a la 8.0:
 
 ```PHP
 require 'vendor/autoload.php';
@@ -38,14 +38,14 @@ require 'vendor/autoload.php';
 use NDD_send_connect_php56\NDD_send_connect_php56;
 
 $apikey = 'tu-api-key || Token';
-$urlBase = "https://baseurle.test"; // url a que se comunicara
-$isToken = false; // si es un token en lugar deuna apikey lo que se esta implementando
+$urlBase = "https://baseurle.test"; // url a la que se comunicara
+$isToken = false; // si es un token se coloca en true 
 $sendConnect = new NDD_send_connect_php56($apikey, $urlBase, isToken);
 ```
 
 ## Enviar un correo electrónico
 
-Puedes enviar un correo electrónico utilizando el método send_email:
+Puedes enviar un correo electrónico utilizando el método ``send_email`` o ``send_email_token``:
 
 ```PHP
 $from = 'correoOrigen@example.com';
