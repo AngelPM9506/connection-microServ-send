@@ -2,11 +2,12 @@
   "name": "angelpm9506/sendgritpapiinterface",
   "description": "proyecto de comunicacion con la api de sengrid ",
   "type": "library",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "NDD_send_connect\\": "src/"
+      "NDD_send_connect\\": "src/",
+      "NDD_send_connect_php56\\": "src/"
     }
   },
   "authors": [
@@ -18,7 +19,7 @@
   "minimum-stability": "stable",
   "prefer-stable": true,
   "require": {
-    "php": "^8.1",
+    "php": "^5.6 || ^7.0 || ^8.0",
     "guzzlehttp/guzzle": "^7.9"
   }
 }
