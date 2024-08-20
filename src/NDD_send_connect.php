@@ -94,7 +94,7 @@ class NDD_send_connect
    * @param string $text
    * @endpoint /v1/send/key
    */
-  public function send_email($from, $to, $subject, $cc = null, $bcc = null, $html = null, $text = null)
+  public function send_email($from, $to, $subject, $cc = null, $bcc = null, $replyTo = null, $html = null, $text = null)
   {
     if (!$to || !$html || !$subject) {
       throw new \Exception("To, Html and Subject are required", 1);
@@ -104,6 +104,7 @@ class NDD_send_connect
       'to' => $to,
       'subject' => $subject,
       'cc' => $cc,
+      'replyTo' => $replyTo,
       'bcc' => $bcc,
       'html' => $html,
       'text' => $text
@@ -117,9 +118,9 @@ class NDD_send_connect
       return json_decode($response->getBody()->getContents());
     } catch (\GuzzleHttp\Exception\RequestException $th) {
       //throw $th;
-      if($th->hasResponse()){
+      if ($th->hasResponse()) {
         return json_decode($th->getResponse()->getBody()->getContents());
-      }else{
+      } else {
 
         return $th->getMessage();
       }
@@ -138,7 +139,7 @@ class NDD_send_connect
    * @endpoint /v1/send/token
    */
 
-  public function send_email_token($from, $to, $subject, $cc = null, $bcc = null, $html = null, $text = null)
+  public function send_email_token($from, $to, $subject, $cc = null, $bcc = null, $replyTo = null, $html = null, $text = null)
   {
     if (!$to || !$html || !$subject) {
       throw new \Exception("To, Html and Subject are required", 1);
@@ -149,6 +150,7 @@ class NDD_send_connect
       'subject' => $subject,
       'cc' => $cc,
       'bcc' => $bcc,
+      'replyTo' => $replyTo,
       'html' => $html,
       'text' => $text
     ];
@@ -161,9 +163,9 @@ class NDD_send_connect
       return json_decode($response->getBody()->getContents());
     } catch (\GuzzleHttp\Exception\RequestException $th) {
       //throw $th;
-      if($th->hasResponse()){
+      if ($th->hasResponse()) {
         return json_decode($th->getResponse()->getBody()->getContents());
-      }else{
+      } else {
 
         return $th->getMessage();
       }
